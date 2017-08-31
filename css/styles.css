@@ -1,0 +1,23 @@
+.maiola-bold { 
+  font-family: Maiola-Bold;
+  font-weight: normal;
+  font-style: normal;
+}
+.maiola-bolditalic { 
+  font-family: Maiola-BoldItalic;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.f-gigantic {
+  font-size: 25rem;
+}
+
+p a {
+  color: #000;
+}
+
+.logo-sng {
+  width: 24px;
+  height: auto;
+}

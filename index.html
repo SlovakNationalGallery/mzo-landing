@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="fonts/MyFontsWebfontsKit.css">
+    <link rel="stylesheet" type="text/css" href="css/cover.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+  </head>
+  <body class="maiola-bold">
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand"><a data-i18n="[href]mzo-link-home" href="https://www.sng.sk/"><img class="logo-sng" src="img/logo_sng.svg" alt="SNG"></a></h3>
+              <nav class="nav nav-masthead">
+                <a class="nav-link ui-langswitch-sk active" href="#">SK</a>
+                <a class="nav-link ui-langswitch-en" href="#">EN</a>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            
+            <h1 class="cover-heading f-gigantic">M</h1>
+            <div class="row justify-content-center mb-5">
+              <div class="col-12">
+                <h3 data-i18n="[html]mzo-subtitle">Majster z Okoličného<br>a gotické umenie Spiša okolo roku 1500</h3>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-md-5 col-lg-4 text-left">
+                <p data-i18n="[html]mzo-info">
+                  7. septembra 2017 — 26. novembra 2017<br>
+                  <a href="https://www.sng.sk/sk/bratislava/navsteva/kde-nas-najdete/esterhazyho-palac" target="_blank">Esterházyho palác</a>, 2. poschodie, Bratislava<br>
+                  Kurátor: <a href="https://www.sng.sk/sk/kontakty/70044_buran-dusan" target="_blank">Dušan Buran</a>
+                </p>
+              </div>
+              <div class="col-md-5 col-lg-4 text-left">
+                <p data-i18n="[html]mzo-disclaimer">
+                  Webová stránka o výstave bude spustená čoskoro.<br>Viac informácií o výstave nájdete <a href='https://www.sng.sk/sk/vystavy/1064_majster-z-okolicneho-a-goticke-umenie-spisa-okolo-roku-1500' target='_blank'>na stránke SNG</a>.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+    <!-- jQuery.i18n -->
+    <script src="js/jquery.i18n/jquery.i18n.js"></script>
+    <script src="js/jquery.i18n/jquery.i18n.messagestore.js"></script>
+    <!-- <script src="js/jquery.i18n/jquery.i18n.fallbacks.js"></script> -->
+    <!-- <script src="js/jquery.i18n/jquery.i18n.parser.js"></script> -->
+    <!-- <script src="js/jquery.i18n/jquery.i18n.emitter.js"></script> -->
+    <!-- <script src="js/jquery.i18n/jquery.i18n.language.js"></script> -->
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+
+        $.i18n({
+          locale: 'sk' // Locale is Slovak
+        })
+        .load( {
+          sk: 'i18n/sk.json',
+          en: 'i18n/en.json'
+        })
+        .done(function() {
+
+          // setup handlers for langswitch
+        
+          $('.ui-langswitch-en').click( function() {
+            $.i18n( {locale: 'en'} );
+            $('body').i18n();
+
+            $('.ui-langswitch-sk').toggleClass('active');
+            $('.ui-langswitch-en').toggleClass('active');
+          } );
+
+          $('.ui-langswitch-sk').click( function() {
+            $.i18n( {locale: 'sk'} );
+            $('body').i18n();
+
+            $('.ui-langswitch-en').toggleClass('active');
+            $('.ui-langswitch-sk').toggleClass('active');
+          } );
+
+          $('body').i18n();
+
+        })
+        .fail(function() {
+          console.error("Couldn't load translations");
+        });;
+      });
+    </script>
+
+  </body>
+</html>
